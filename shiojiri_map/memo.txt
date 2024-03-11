@@ -1,0 +1,66 @@
+60683から
+pedestrian_marking
+
+  <relation id="192">
+    <member type="way" role="left" ref="144"/>
+    <member type="way" role="right" ref="145"/>
+    <tag k="type" v="lanelet"/>
+    <tag k="subtype" v="road"/>
+    <tag k="speed_limit" v="40"/>
+    <tag k="location" v="urban"/>
+    <tag k="one_way" v="yes"/>
+    <tag k="turn_direction" v="right"/>
+    <tag k="intersection_area" v="446"/>
+  </relation>
+  <relation id="193">
+    <member type="way" role="left" ref="20052"/>
+    <member type="way" role="right" ref="20054"/>
+    <tag k="type" v="lanelet"/>
+    <tag k="subtype" v="road"/>
+    <tag k="speed_limit" v="10"/>
+    <tag k="location" v="private"/>
+    <tag k="one_way" v="yes"/>
+  </relation>
+  61230 walkwayをコメントアウト
+  
+192に関連するもの
+      <nd ref="5086"/>
+    <nd ref="5087"/>
+    <nd ref="10110"/>
+    <nd ref="11589"/>
+    <nd ref="11590"/>
+    <nd ref="11591"/>
+    <nd ref="11592"/>
+    <nd ref="11633"/>
+    <nd ref="11632"/>
+    <nd ref="11631"/>
+    <nd ref="11630"/>
+    <nd ref="11629"/>
+    <nd ref="11628"/>
+    <nd ref="11627"/>
+    <nd ref="11626"/>
+    <nd ref="11625"/>
+    <nd ref="11624"/>
+    <nd ref="11623"/>
+    <nd ref="11622"/>
+    <nd ref="11621"/>
+    <nd ref="11620"/>
+    <nd ref="11619"/>
+    <nd ref="11618"/>
+    <nd ref="4802"/>
+    <nd ref="4803"/>
+    <nd ref="4804"/>
+    <nd ref="4805"/>
+    <nd ref="4806"/>
+
+    この選択されたコードは、XML形式のデータの一部で、地理的なノードを表現しています。XMLは、データを構造化して保存・転送するためのマークアップ言語です。
+
+具体的には、`<node>`要素がノードを表現しています。このノードは、`id`属性により一意に識別され、`5086`というIDが割り当てられています。また、`lat`と`lon`属性は、ノードの緯度と経度をそれぞれ表しています。
+
+`<node>`要素の中には、複数の`<tag>`要素が含まれています。これらの`<tag>`要素は、ノードに関する追加情報を提供します。各`<tag>`要素は、`k`（キー）属性と`v`（値）属性を持ちます。この例では、`mgrs_code`、`local_x`、`local_y`、`ele`という4つのキーがあり、それぞれに対応する値が設定されています。
+
+- `mgrs_code`: MGRS（Military Grid Reference System）コードを表します。これは、地球上の位置を表すための座標系です。
+- `local_x`と`local_y`: ローカル座標系におけるノードの位置を表します。
+- `ele`: ノードの高度（elevation）を表します。
+
+このようなXMLデータは、地理的な情報を表現するためによく使用されます。この場合、それぞれのノードが地図上の特定の位置を表していると考えられます。
