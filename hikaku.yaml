@@ -4,7 +4,7 @@ OpenSCENARIO:
   FileHeader:
     revMajor: 1
     revMinor: 0
-    date: "2021-02-01T08:31:04.600Z"
+    date: "2024-03-01T08:31:04.600Z"
     description: ""
     author: ""
   ParameterDeclarations:
@@ -120,6 +120,15 @@ OpenSCENARIO:
                       s: 0
                       offset: 0
                       Orientation: { type: relative, h: 0, p: 0, r: 0 }
+              - RoutingAction:
+                  AcquirePositionAction:
+                    Position:
+                      LanePosition:
+                        roadId: ""
+                        laneId: "21123"
+                        s: 0
+                        offset: 0
+                        Orientation: { type: relative, h: 0, p: 0, r: 0 }
               - LongitudinalAction:
                   SpeedAction:
                     SpeedActionDynamics:
@@ -128,7 +137,7 @@ OpenSCENARIO:
                       dynamicsShape: step
                     SpeedActionTarget:
                       AbsoluteTargetSpeed:
-                        value: 0
+                        value: 30
     Story:
       - name: ""
         Act:

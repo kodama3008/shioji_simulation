@@ -142,14 +142,14 @@ OpenSCENARIO:
       - name: ""
         Act:
           - name: _EndCondition
-            ManeuverGroup:
-              - maximumExecutionCount: 1
+            ManeuverGroup: #マニューバーグループは、特定のアクターに関連付けられた操作のセットを定義する。一連のManeuverをグループ化するためのコンテナ
+              - maximumExecutionCount: 1 # maximumExecutionCountは、特定のアクション、イベント、またはマニューバーがシナリオの実行中に最大で何回実行されるかを指定するパラメータ
                 name: ""
                 Actors:
-                  selectTriggeringEntities: false
+                  selectTriggeringEntities: false #トリガー条件やイベントを起動するのに必要なエンティティ（例えば、車両、歩行者など）の選択を指示します。
                   EntityRef:
                     - entityRef: npc
-                Maneuver:
+                Maneuver: # Maneuverはそのコンテナ内で定義され、具体的な動作やアクションを記述する
                   - name: ""
                     Event:
                       - name: ""
@@ -179,10 +179,10 @@ OpenSCENARIO:
                                       value: 0
                                       speedTargetValueType: delta
                                       continuous: true
-              - maximumExecutionCount: 1
+              - maximumExecutionCount: 1 #特定のアクション、イベント、またはマニューバーがシナリオの実行中に最大で何回実行されるかを指定するパラメータ
                 name: ""
                 Actors:
-                  selectTriggeringEntities: false
+                  selectTriggeringEntities: false #トリガー条件やイベントを起動するのに必要なエンティティ（例えば、車両、歩行者など）の選択を指示します。
                   EntityRef:
                     - entityRef: ego
                 Maneuver:
@@ -253,3 +253,4 @@ OpenSCENARIO:
                 SimulationTimeCondition:
                   value: 100
                   rule: greaterThan
+# conditionEdge: 条件が「満たされた瞬間」（rising）、"満たされなくなった瞬間"（falling）、または「条件の状態の変化がない」（none）のいずれかを指定します。
