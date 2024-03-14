@@ -88,7 +88,7 @@ OpenSCENARIO:
                   Position:
                     LanePosition:
                       roadId: ""
-                      laneId: "1"
+                      laneId: "147" #元々1
                       s: 20
                       offset: 0
                       Orientation: { type: relative, h: 0, p: 0, r: 0 }
@@ -97,7 +97,7 @@ OpenSCENARIO:
                     Position:
                       LanePosition:
                         roadId: ""
-                        laneId: "193"
+                        laneId: "193" #元々193
                         s: 50
                         offset: 0
                         Orientation: { type: relative, h: 0, p: 0, r: 0 }
@@ -116,7 +116,7 @@ OpenSCENARIO:
                   Position:
                     LanePosition:
                       roadId: ""
-                      laneId: "21"
+                      laneId: "21" #元々21
                       s: 0
                       offset: 0
                       Orientation: { type: relative, h: 0, p: 0, r: 0 }
@@ -125,7 +125,7 @@ OpenSCENARIO:
                     Position:
                       LanePosition:
                         roadId: ""
-                        laneId: "21123"
+                        laneId: "21123" #元々21123
                         s: 0
                         offset: 0
                         Orientation: { type: relative, h: 0, p: 0, r: 0 }
@@ -174,15 +174,17 @@ OpenSCENARIO:
                                     value: 0
                                     dynamicsShape: step
                                   SpeedActionTarget:
-                                    RelativeTargetSpeed:
-                                      entityRef: ego
-                                      value: 0
-                                      speedTargetValueType: delta
-                                      continuous: true
+                                    AbsoluteTargetSpeed:
+                                      value: 60
+                                    # RelativeTargetSpeed:
+                                    #   entityRef: ego
+                                    #   value: 0
+                                    #   speedTargetValueType: delta
+                                    #   continuous: true
               - maximumExecutionCount: 1 #特定のアクション、イベント、またはマニューバーがシナリオの実行中に最大で何回実行されるかを指定するパラメータ
                 name: ""
                 Actors:
-                  selectTriggeringEntities: false #トリガー条件やイベントを起動するのに必要なエンティティ（例えば、車両、歩行者など）の選択を指示します。
+                  selectTriggeringEntities: false #トリガー条件やイベントを起動するのに必要なエンティティ（例えば、車両、歩行者など）の選択を指示する
                   EntityRef:
                     - entityRef: ego
                 Maneuver:
@@ -196,17 +198,17 @@ OpenSCENARIO:
                                 - name: ""
                                   delay: 0
                                   conditionEdge: none
-                                  ByEntityCondition:
-                                    TriggeringEntities:
-                                      triggeringEntitiesRule: any
+                                  ByEntityCondition: # ByEntityConditionは、特定のエンティティの状態に関連する条件を指定するために使用される
+                                    TriggeringEntities: # TriggeringEntitiesは、条件を満たすエンティティを指定するために使用される
+                                      triggeringEntitiesRule: any # triggeringEntitiesRuleは、エンティティの集合が条件を満たすために必要なルールを指定 any(or) all(and) none
                                       EntityRef:
                                         - entityRef: ego
                                     EntityCondition:
-                                      ReachPositionCondition:
+                                      ReachPositionCondition: # ReachPositionConditionは、特定のエンティティが特定の位置に到達したかどうかを判定するために使用される
                                         Position:
                                           LanePosition:
                                             roadId: ""
-                                            laneId: "193"
+                                            laneId: "193" #元々193
                                             s: 50
                                             offset: 0
                                             Orientation: { type: relative, h: 0, p: 0, r: 0 }
@@ -253,4 +255,4 @@ OpenSCENARIO:
                 SimulationTimeCondition:
                   value: 100
                   rule: greaterThan
-# conditionEdge: 条件が「満たされた瞬間」（rising）、"満たされなくなった瞬間"（falling）、または「条件の状態の変化がない」（none）のいずれかを指定します。
+# conditionEdge: 条件が「満たされた瞬間」（rising）、"満たされなくなった瞬間"（falling）、または「条件の状態の変化がない」（none）のいずれかを指定する
