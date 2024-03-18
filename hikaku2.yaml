@@ -137,7 +137,7 @@ OpenSCENARIO:
                       dynamicsShape: step
                     SpeedActionTarget:
                       AbsoluteTargetSpeed:
-                        value: 30
+                        value: 5 #元々30
     Story:
       - name: ""
         Act:
@@ -175,7 +175,7 @@ OpenSCENARIO:
                                     dynamicsShape: step
                                   SpeedActionTarget:
                                     AbsoluteTargetSpeed:
-                                      value: 60
+                                      value: 5
                                     # RelativeTargetSpeed:
                                     #   entityRef: ego
                                     #   value: 0
