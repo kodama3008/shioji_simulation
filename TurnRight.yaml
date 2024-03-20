@@ -78,32 +78,6 @@ OpenSCENARIO:
               positionZ: 0.3
           Properties:
             Property: []
-      - name: npc2
-        Vehicle:
-          name: ""
-          vehicleCategory: car
-          BoundingBox:
-            Center: { x: 0, y: 0, z: 0 }
-            Dimensions: { width: 2.25, length: 4.77, height: 2.5 }
-          Performance:
-            maxSpeed: 30
-            maxAcceleration: INF
-            maxDeceleration: INF
-          Axles:
-            FrontAxle:
-              maxSteering: 3.1415
-              wheelDiameter: 0.61093
-              trackWidth: 4
-              positionX: 1
-              positionZ: 0.3
-            RearAxle:
-              maxSteering: 3.1415
-              wheelDiameter: 0.6
-              trackWidth: 4
-              positionX: -1
-              positionZ: 0.3
-          Properties:
-            Property: []
   Storyboard:
     Init:
       Actions:
@@ -152,34 +126,6 @@ OpenSCENARIO:
                       LanePosition:
                         roadId: ""
                         laneId: "21123" #元々21123
-                        s: 0
-                        offset: 0
-                        Orientation: { type: relative, h: 0, p: 0, r: 0 }
-              - LongitudinalAction:
-                  SpeedAction:
-                    SpeedActionDynamics:
-                      dynamicsDimension: time
-                      value: 0
-                      dynamicsShape: step
-                    SpeedActionTarget:
-                      AbsoluteTargetSpeed:
-                        value: 11.11 #元々30
-          - entityRef: npc2
-            PrivateAction:
-              - TeleportAction:
-                  Position:
-                    LanePosition:
-                      roadId: ""
-                      laneId: "174"
-                      s: 0
-                      offset: 0
-                      Orientation: { type: relative, h: 0, p: 0, r: 0 }
-              - RoutingAction:
-                  AcquirePositionAction:
-                    Position:
-                      LanePosition:
-                        roadId: ""
-                        laneId: "23" #
                         s: 0
                         offset: 0
                         Orientation: { type: relative, h: 0, p: 0, r: 0 }
